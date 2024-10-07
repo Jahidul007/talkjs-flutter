@@ -282,12 +282,13 @@ class ChatBoxState extends State<ChatBox> {
           if (snapshot.connectionState == ConnectionState.done) {
             return InAppWebView(
               initialSettings: InAppWebViewSettings(
+                javaScriptCanOpenWindowsAutomatically: true,
                   useHybridComposition: true,
                   disableInputAccessoryView: true,
                   transparentBackground: true,
                   useShouldOverrideUrlLoading: true,
                   applicationNameForUserAgent: snapshot.data),
-              onWebViewCreated: _onWebViewCreated,
+              onWebViewCreated: kIsWeb?null: _onWebViewCreated,
               onLoadStop: _onLoadStop,
               onConsoleMessage:
                   (InAppWebViewController controller, ConsoleMessage message) {
