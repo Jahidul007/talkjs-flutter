@@ -585,7 +585,7 @@ class ChatBoxState extends State<ChatBox> {
       print('📗 chatbox._onWebViewCreated');
     }
 
-    controller.addJavaScriptHandler(
+   /* controller.addJavaScriptHandler(
         handlerName: 'JSCSendMessage', callback: _jscSendMessage);
     controller.addJavaScriptHandler(
         handlerName: 'JSCTranslationToggled', callback: _jscTranslationToggled);
@@ -598,7 +598,7 @@ class ChatBoxState extends State<ChatBox> {
         handlerName: 'JSCCustomConversationAction',
         callback: _jscCustomConversationAction);
     controller.addJavaScriptHandler(
-        handlerName: 'JSCTokenFetcher', callback: _jscTokenFetcher);
+        handlerName: 'JSCTokenFetcher', callback: _jscTokenFetcher);*/
 
     String htmlData = await rootBundle
         .loadString('packages/talkjs_flutter/assets/index.html');

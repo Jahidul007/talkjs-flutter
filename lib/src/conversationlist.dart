@@ -266,12 +266,12 @@ class ConversationListState extends State<ConversationList> {
       print('📗 conversationlist._onWebViewCreated');
     }
 
-    controller.addJavaScriptHandler(
+    /*controller.addJavaScriptHandler(
         handlerName: 'JSCSelectConversation', callback: _jscSelectConversation);
     controller.addJavaScriptHandler(
         handlerName: 'JSCLoadingState', callback: _jscLoadingState);
     controller.addJavaScriptHandler(
-        handlerName: 'JSCTokenFetcher', callback: _jscTokenFetcher);
+        handlerName: 'JSCTokenFetcher', callback: _jscTokenFetcher);*/
 
     String htmlData = await rootBundle
         .loadString('packages/talkjs_flutter/assets/index.html');

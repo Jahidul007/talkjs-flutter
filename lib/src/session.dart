@@ -124,7 +124,7 @@ class Session with ChangeNotifier {
       print('📗 session._onWebViewCreated');
     }
 
-    if (onMessage != null) {
+/*    if (onMessage != null) {
       controller.addJavaScriptHandler(
         handlerName: 'JSCOnMessage',
         callback: _jscOnMessage,
@@ -148,7 +148,7 @@ class Session with ChangeNotifier {
     controller.addJavaScriptHandler(
         handlerName: 'JSCValidCredentials',
         callback: (args) =>
-            _validCredentialsCompleter.complete(json.decode(args[0]) as bool));
+            _validCredentialsCompleter.complete(json.decode(args[0]) as bool));*/
 
     String htmlData = await rootBundle
         .loadString('packages/talkjs_flutter/assets/index.html');
